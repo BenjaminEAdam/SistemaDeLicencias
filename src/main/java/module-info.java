@@ -4,7 +4,10 @@ module com.example.sistemadelicencias {
 
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
+    requires java.desktop;
 
-    opens com.example.sistemadelicencias to javafx.fxml;
-    exports com.example.sistemadelicencias;
+    opens com.sistemadelicencias to javafx.fxml;
+    exports com.sistemadelicencias;
+    exports com.sistemadelicencias.controller;
+    opens com.sistemadelicencias.controller to javafx.fxml;
 }

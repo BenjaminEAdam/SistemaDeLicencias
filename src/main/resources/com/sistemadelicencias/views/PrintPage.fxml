@@ -12,7 +12,7 @@
   </padding>
 
   <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
+  <Button text="Imprimir" onAction="#onPrintButtonClick"/>
 
-  <Button text="Bay!" onAction="#onBayButtonClick"/>
+  <Button text="Cancelar" onAction="#onCancelButtonClick"/>
 </VBox>
