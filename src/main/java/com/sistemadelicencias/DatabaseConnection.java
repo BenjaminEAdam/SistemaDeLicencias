@@ -6,9 +6,10 @@ import java.sql.SQLException;
 
 public class DatabaseConnection {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/dan";
-    private static final String USER = "danuser";
-    private static final String PASSWORD = "danpassword";
+    // Deberiamos pasarla por un .env???
+    private static final String URL = "jdbc:mysql://localhost:3306/dblicencias";
+    private static final String USER = "user";
+    private static final String PASSWORD = "password";
 
     public static Connection getConnection() {
         Connection connection = null;
