@@ -45,8 +45,12 @@ public class UsuarioServiceImpl implements UsuarioService{
             throw new IllegalArgumentException("El nombre de usuario es requerido.");
         }
 
-        if (usuario.getRol() == null || usuario.getRol().isEmpty()) {
-            throw new IllegalArgumentException("El rol es requerido.");
+        if (usuario.getContrasenia() == null || usuario.getContrasenia().isEmpty()) {
+            throw new IllegalArgumentException("La contrasenia es requerida.");
+        }
+
+        if (usuario.getPermisos() == null || usuario.getPermisos().isEmpty()) {
+            throw new IllegalArgumentException("Los permisos son requeridos.");
         }
     }
 

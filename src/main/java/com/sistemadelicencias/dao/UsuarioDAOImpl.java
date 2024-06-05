@@ -14,13 +14,14 @@ public class UsuarioDAOImpl implements UsuarioDAO{
     // Ver que retornar después
     @Override
     public void create(Usuario usuario) throws SQLException {
-        String query = "INSERT INTO usuarios (correoElectronico, nombreDeUsuario, rol) VALUES (?, ?, ?)";
+        String query = "INSERT INTO usuarios (correoElectronico, nombreDeUsuario, contrasenia, permisos) VALUES (?, ?, ?, ?)";
         try (   Connection connection = DatabaseConnection.getConnection();
                 PreparedStatement stmt = connection.prepareStatement(query))
         {
             stmt.setString(1, usuario.getCorreoElectronico());
             stmt.setString(2, usuario.getNombreDeUsuario());
-            stmt.setString(3, usuario.getRol());
+            stmt.setString(3, usuario.getContrasenia());
+            stmt.setString(4, usuario.getPermisos());
             stmt.executeUpdate();
         }
     }
@@ -35,7 +36,7 @@ public class UsuarioDAOImpl implements UsuarioDAO{
             stmt.setString(1, correoElectronico);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                usuario = new Usuario(rs.getString("correoElectronico"), rs.getString("nombreDeUsuario"), rs.getString("rol"));
+                usuario = new Usuario(rs.getString("correoElectronico"), rs.getString("nombreDeUsuario"), rs.getString("contrasenia"), rs.getString("permisos"));
             }
         }
         return usuario;

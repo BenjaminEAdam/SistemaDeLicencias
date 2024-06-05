@@ -3,20 +3,30 @@ package com.sistemadelicencias.models;
 public class Usuario {
     private String correoElectronico;
     private String nombreDeUsuario;
-    private String rol;
+    private String contrasenia;
+    private String permisos;
 
-    public Usuario(String correoElectronico, String nombreDeUsuario, String rol) {
+    public Usuario(String correoElectronico, String nombreDeUsuario, String permisos, String contrasenia) {
         this.correoElectronico = correoElectronico;
         this.nombreDeUsuario = nombreDeUsuario;
-        this.rol = rol;
+        this.permisos = permisos;
+        this.contrasenia = contrasenia;
     }
 
-    public String getRol() {
-        return rol;
+    public String getContrasenia() {
+        return contrasenia;
     }
 
-    public void setRol(String rol) {
-        this.rol = rol;
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
+    }
+
+    public String getPermisos() {
+        return permisos;
+    }
+
+    public void setPermisos(String permisos) {
+        this.permisos = permisos;
     }
 
     public String getNombreDeUsuario() {
