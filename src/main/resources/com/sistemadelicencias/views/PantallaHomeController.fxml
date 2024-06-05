@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minWidth="-Infinity" prefHeight="768.0" prefWidth="1366" style="-fx-background-color: #D9D9D9;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sistemadelicencias.controller.PantallaHomeController">
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="101.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1366.0" />
+   <ImageView fitHeight="63.0" fitWidth="69.0" layoutX="1235.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@free-user-icon-3297-thumb.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="63.0" fitWidth="65.0" layoutX="50.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@SANTA-FE-CAPITAL-1-2-768x987.png" />
+      </image></ImageView>
+   <Text layoutX="59.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SGL" textAlignment="CENTER" wrappingWidth="192.578125">
+      <font>
+         <Font name="Book Antiqua" size="42.0" />
+      </font>
+   </Text>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7e2da" height="389.0" layoutX="51.0" layoutY="153.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="321.0" />
+   <Button layoutX="122.0" layoutY="384.0" mnemonicParsing="false" onAction="#botonModificarTitular" prefHeight="63.0" prefWidth="180.0" text="MODIFICAR TITULAR" textFill="#030303">
+      <font>
+         <Font name="Arial Black" size="12.0" />
+      </font>
+   </Button>
+   <Button layoutX="122.0" layoutY="275.0" mnemonicParsing="false" onAction="#botonAltaTitular" prefHeight="63.0" prefWidth="180.0" text="ALTA TITULAR" textFill="#030303">
+      <font>
+         <Font name="Arial Black" size="12.0" />
+      </font>
+   </Button>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7e2da" height="389.0" layoutX="510.0" layoutY="153.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="321.0" />
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7e2da" height="389.0" layoutX="984.0" layoutY="153.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="321.0" />
+   <Text layoutX="571.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LICENCIA" textAlignment="CENTER" wrappingWidth="199.578125">
+      <font>
+         <Font name="Bell MT" size="41.0" />
+      </font>
+   </Text>
+   <Text layoutX="1045.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USUARIO" textAlignment="CENTER" wrappingWidth="199.578125">
+      <font>
+         <Font name="Bell MT" size="41.0" />
+      </font>
+   </Text>
+   <Text layoutX="116.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TITULAR" textAlignment="CENTER" wrappingWidth="192.578125">
+      <font>
+         <Font name="Bell MT" size="39.0" />
+      </font>
+   </Text>
+   <Button layoutX="581.0" layoutY="417.0" mnemonicParsing="false" onAction="#botonInformesLicencia" prefHeight="63.0" prefWidth="180.0" text="INFORMES LICENCIA" textFill="#030303">
+      <font>
+         <Font name="Arial Black" size="12.0" />
+      </font>
+   </Button>
+   <Button layoutX="581.0" layoutY="332.0" mnemonicParsing="false" onAction="#botonRenovarLicencia" prefHeight="63.0" prefWidth="180.0" text="RENOVAR LICENCIA" textFill="#030303">
+      <font>
+         <Font name="Arial Black" size="12.0" />
+      </font>
+   </Button>
+   <Button layoutX="581.0" layoutY="244.0" mnemonicParsing="false" onAction="#botonEmitirLicencia" prefHeight="63.0" prefWidth="180.0" text="EMITIR LICENCIA" textFill="#030303">
+      <font>
+         <Font name="Arial Black" size="12.0" />
+      </font>
+   </Button>
+   <Button layoutX="1055.0" layoutY="285.0" mnemonicParsing="false" onAction="#botonAltaUsuario" prefHeight="63.0" prefWidth="180.0" text="ALTA USUARIO" textFill="#030303">
+      <font>
+         <Font name="Arial Black" size="12.0" />
+      </font>
+   </Button>
+   <Button layoutX="1055.0" layoutY="385.0" mnemonicParsing="false" onAction="#botonModificarUsuario" prefHeight="63.0" prefWidth="180.0" text="MODIFICAR USUARIO" textFill="#030303">
+      <font>
+         <Font name="Arial Black" size="12.0" />
+      </font>
+   </Button>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="101.0" layoutX="7.0" layoutY="663.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1366.0" />
+   <Text layoutX="370.0" layoutY="722.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MUNICIPALIDAD DE SANTA FE" textAlignment="CENTER" wrappingWidth="626.578125">
+      <font>
+         <Font name="Bell MT" size="39.0" />
+      </font>
+   </Text>
+   <effect>
+      <Blend />
+   </effect>
+</AnchorPane>
