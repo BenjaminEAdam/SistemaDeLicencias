@@ -17,7 +17,18 @@ public class UsuarioServiceImpl implements UsuarioService{
     public void createUsuario(Usuario usuario) throws SQLException {
         this.validateUsuario(usuario);
         // Falta validar que no exista en la db un usuario con este correo
+        if (usuarioDAO.getUsuarioByCorreoElectronico(usuario.getCorreoElectronico()) != null) {
+            throw new IllegalArgumentException("El correo electrónico ya está en uso.");
+        }
         usuarioDAO.create(usuario);
+    }
+
+    @Override
+    public Usuario getUsuarioByCorreoElectronico(String correoElectronico) throws SQLException {
+        if (!isValidEmail(correoElectronico)) {
+            throw new IllegalArgumentException("El correo electrónico no tiene un formato válido.");
+        }
+        return usuarioDAO.getUsuarioByCorreoElectronico(correoElectronico);
     }
 
 

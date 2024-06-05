@@ -5,6 +5,7 @@ import com.sistemadelicencias.models.Usuario;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UsuarioDAOImpl implements UsuarioDAO{
@@ -14,12 +15,29 @@ public class UsuarioDAOImpl implements UsuarioDAO{
     @Override
     public void create(Usuario usuario) throws SQLException {
         String query = "INSERT INTO usuarios (correoElectronico, nombreDeUsuario, rol) VALUES (?, ?, ?)";
-        try (Connection connection = DatabaseConnection.getConnection();
-            PreparedStatement stmt = connection.prepareStatement(query)) {
+        try (   Connection connection = DatabaseConnection.getConnection();
+                PreparedStatement stmt = connection.prepareStatement(query))
+        {
             stmt.setString(1, usuario.getCorreoElectronico());
             stmt.setString(2, usuario.getNombreDeUsuario());
             stmt.setString(3, usuario.getRol());
             stmt.executeUpdate();
         }
+    }
+
+    @Override
+    public Usuario getUsuarioByCorreoElectronico(String correoElectronico) throws SQLException {
+        Usuario usuario = null;
+        String query = "SELECT * FROM usuarios WHERE correoElectronico = ?";
+        try (   Connection connection = DatabaseConnection.getConnection();
+                PreparedStatement stmt = connection.prepareStatement(query))
+        {
+            stmt.setString(1, correoElectronico);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                usuario = new Usuario(rs.getString("correoElectronico"), rs.getString("nombreDeUsuario"), rs.getString("rol"));
+            }
+        }
+        return usuario;
     }
 }
