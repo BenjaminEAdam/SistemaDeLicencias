@@ -42,47 +42,47 @@
             <Font name="Bell MT" size="39.0" />
         </font>
     </Text>
-   <ComboBox id="TipoDocComboBox" layoutX="244.0" layoutY="217.0" prefWidth="150.0" />
-   <TextField layoutX="609.0" layoutY="217.0" />
-   <Label layoutX="65.0" layoutY="216.0" text="Tipo De Documento:">
+   <ComboBox fx:id="tipoDocComboBox" layoutX="244.0" layoutY="217.0" prefWidth="150.0" />
+   <TextField fx:id="numeroDocumentoTextField" layoutX="609.0" layoutY="217.0" />
+   <Label fx:id="tipodoclabel" layoutX="65.0" layoutY="216.0" text="Tipo De Documento:">
       <font>
          <Font size="18.0" />
       </font></Label>
-   <Label layoutX="467.0" layoutY="216.0" text="Nº Documento:">
+   <Label fx:id="nrodoclabel" layoutX="467.0" layoutY="216.0" text="Nº Documento:">
       <font>
          <Font size="18.0" />
       </font></Label>
-   <Label disable="true" layoutX="77.0" layoutY="374.0" text="Nombre:">
+   <Label fx:id="nombrelabel" disable="true" layoutX="77.0" layoutY="374.0" text="Nombre:">
       <font>
          <Font size="18.0" />
       </font>
    </Label>
-   <Label disable="true" layoutX="556.0" layoutY="372.0" text="Apellido:">
+   <Label fx:id="apellidolabel" disable="true" layoutX="556.0" layoutY="372.0" text="Apellido:">
       <font>
          <Font size="18.0" />
       </font>
    </Label>
-   <Label disable="true" layoutX="932.0" layoutY="371.0" text="Fecha Nacimiento:">
+   <Label fx:id="fechanacimientolabel" disable="true" layoutX="932.0" layoutY="371.0" text="Fecha Nacimiento:">
       <font>
          <Font size="18.0" />
       </font>
    </Label>
-   <Label disable="true" layoutX="73.0" layoutY="422.0" text="Dirección:">
+   <Label fx:id="direccionlabel" disable="true" layoutX="73.0" layoutY="422.0" text="Dirección:">
       <font>
          <Font size="18.0" />
       </font>
    </Label>
-   <Label disable="true" layoutX="556.0" layoutY="422.0" text="Clase solicitada:">
+   <Label fx:id="clasesolicitadalabel" disable="true" layoutX="556.0" layoutY="422.0" text="Clase solicitada:">
       <font>
          <Font size="18.0" />
       </font>
    </Label>
-   <Label disable="true" layoutX="935.0" layoutY="419.0" text="Grupo sanguíneo:">
+   <Label fx:id="gruposanguineolabel" disable="true" layoutX="935.0" layoutY="419.0" text="Grupo sanguíneo:">
       <font>
          <Font size="18.0" />
       </font>
    </Label>
-   <Label disable="true" layoutX="70.0" layoutY="468.0" text="Factor RH:">
+   <Label fx:id="factorrhlabel" disable="true" layoutX="70.0" layoutY="468.0" text="Factor RH:">
       <font>
          <Font size="18.0" />
       </font>
@@ -93,23 +93,23 @@
       </font>
    </Label>
    <TextField fx:id="nombreTextField" disable="true" layoutX="178.0" layoutY="372.0" />
-   <ComboBox disable="true" layoutX="700.0" layoutY="420.0" prefHeight="25.0" prefWidth="89.0" />
-   <ComboBox disable="true" layoutX="177.0" layoutY="468.0" prefWidth="150.0" />
-   <DatePicker disable="true" layoutX="1087.0" layoutY="372.0" />
-   <TextField disable="true" layoutX="640.0" layoutY="372.0" />
-   <TextField disable="true" layoutX="177.0" layoutY="420.0" />
-   <ComboBox disable="true" layoutX="1087.0" layoutY="420.0" prefHeight="25.0" prefWidth="174.0" />
-   <CheckBox disable="true" layoutX="565.0" layoutY="467.0" mnemonicParsing="false" text="Donante de órganos">
+   <ComboBox fx:id="claseSolicitada" disable="true" layoutX="700.0" layoutY="420.0" prefHeight="25.0" prefWidth="89.0" />
+   <ComboBox fx:id="factorRH" disable="true" layoutX="177.0" layoutY="468.0" prefWidth="150.0" />
+   <DatePicker fx:id="fechaNacimiento" disable="true" layoutX="1087.0" layoutY="372.0" />
+   <TextField fx:id="apellido" disable="true" layoutX="640.0" layoutY="372.0" />
+   <TextField fx:id="direccion" disable="true" layoutX="177.0" layoutY="420.0" />
+   <ComboBox fx:id="gruposanguineo" disable="true" layoutX="1087.0" layoutY="420.0" prefHeight="25.0" prefWidth="174.0" />
+   <CheckBox fx:id="donante" disable="true" layoutX="565.0" layoutY="467.0" mnemonicParsing="false" text="Donante de órganos">
       <font>
          <Font size="18.0" />
       </font>
    </CheckBox>
-   <Button disable="true" layoutX="897.0" layoutY="529.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="180.0" text="CONFIRMAR" textFill="#030303">
+   <Button fx:id="confirmarbutton" disable="true" layoutX="897.0" layoutY="529.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="180.0" text="CONFIRMAR" textFill="#030303">
       <font>
          <Font name="Arial Black" size="12.0" />
       </font>
    </Button>
-   <Button disable="true" layoutX="1113.0" layoutY="529.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="180.0" text="CANCELAR" textFill="#030303">
+   <Button fx:id="cancelarbutton" disable="true" layoutX="1113.0" layoutY="529.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="180.0" text="CANCELAR" textFill="#030303">
       <font>
          <Font name="Arial Black" size="12.0" />
       </font>
