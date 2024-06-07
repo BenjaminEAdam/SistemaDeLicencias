@@ -24,6 +24,11 @@ public class UsuarioServiceImpl implements UsuarioService{
     }
 
     @Override
+    public Usuario getUsuarioById(int id) throws SQLException {
+        return usuarioDAO.getUsuarioById(id);
+    }
+
+    @Override
     public Usuario getUsuarioByCorreoElectronico(String correoElectronico) throws SQLException {
         if (!isValidEmail(correoElectronico)) {
             throw new IllegalArgumentException("El correo electrónico no tiene un formato válido.");
