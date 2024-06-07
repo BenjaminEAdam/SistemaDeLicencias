@@ -13,6 +13,7 @@ public class HelloController {
     @FXML
     protected void onPrintButtonClick() {
         welcomeText.setText("Imprimiendo licencia...");
+        // this.probarCrearUsuario();
     }
 
     @FXML
@@ -22,4 +23,5 @@ public class HelloController {
         // Cerrar la ventana
         stage.close();
     }
+
 }

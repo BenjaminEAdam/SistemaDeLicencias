@@ -1,16 +1,33 @@
 package com.sistemadelicencias.models;
 
 public class Usuario {
+    private int id;
     private String correoElectronico;
     private String nombreDeUsuario;
     private String contrasenia;
     private String permisos;
 
-    public Usuario(String correoElectronico, String nombreDeUsuario, String permisos, String contrasenia) {
+    public Usuario(int id, String correoElectronico, String nombreDeUsuario, String contrasenia, String permisos) {
+        this.id = id;
         this.correoElectronico = correoElectronico;
         this.nombreDeUsuario = nombreDeUsuario;
-        this.permisos = permisos;
         this.contrasenia = contrasenia;
+        this.permisos = permisos;
+    }
+
+    public Usuario(String correoElectronico, String nombreDeUsuario, String contrasenia, String permisos) {
+        this.correoElectronico = correoElectronico;
+        this.nombreDeUsuario = nombreDeUsuario;
+        this.contrasenia = contrasenia;
+        this.permisos = permisos;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getContrasenia() {
