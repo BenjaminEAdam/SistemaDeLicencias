@@ -31,6 +31,21 @@ public class UsuarioDAOImpl implements UsuarioDAO{
         }
     }
 
+    @Override
+    public void update(Usuario usuario) throws SQLException {
+        String query = "UPDATE usuarios SET correoElectronico = ?, nombreDeUsuario = ?, contrasenia = ?, permisos = ? WHERE id = ?";
+        try (   Connection connection = DatabaseConnection.getConnection();
+                PreparedStatement stmt = connection.prepareStatement(query))
+        {
+            stmt.setString(1, usuario.getCorreoElectronico());
+            stmt.setString(2, usuario.getNombreDeUsuario());
+            stmt.setString(3, usuario.getContrasenia());
+            stmt.setString(4, usuario.getPermisos());
+            stmt.setInt(5, usuario.getId());
+            stmt.executeUpdate();
+        }
+    }
+
     // Por ahora retorna null
     // Ver si retornar alguna excepción
     @Override
