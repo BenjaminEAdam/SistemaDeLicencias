@@ -1,0 +1,35 @@
+CREATE TABLE contribuyente(
+	nroDocumento VARCHAR(10) PRIMARY KEY,
+    tipoDocumento VARCHAR(20),
+    apellido VARCHAR(20),
+    nombre VARCHAR(40),
+    fechaNacimiento DATE
+);
+
+CREATE TABLE titular(
+	nroDocumento VARCHAR(10) PRIMARY KEY,
+    tipoDocumento VARCHAR(20),
+    apellido VARCHAR(20),
+    nombre VARCHAR(40),
+    fechaNacimiento DATE,
+    direcion VARCHAR(50),
+    claseSolicitada VARCHAR(1),
+    grupoSanguineo VARCHAR(1),
+    factorRH VARCHAR(1),
+    esDonante BOOLEAN
+);
+
+CREATE TABLE licencia(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    nroDocumentoTitular VARCHAR(10),
+    fechaEmision DATE,
+    fechaExpiracion DATE,
+    FOREIGN KEY(nroDocumentoTitular) REFERENCES titular(nroDocumento) ON DELETE CASCADE
+);
+
+CREATE TABLE usuario(
+	correoElectronico VARCHAR(100) PRIMARY KEY,
+    contrasenia VARCHAR(40),
+    rol VARCHAR(20)
+);
+
