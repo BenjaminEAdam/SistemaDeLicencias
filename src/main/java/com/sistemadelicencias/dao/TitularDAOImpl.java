@@ -2,11 +2,13 @@ package com.sistemadelicencias.dao;
 
 import com.sistemadelicencias.DatabaseConnection;
 import com.sistemadelicencias.models.Titular;
+import com.sistemadelicencias.models.Usuario;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 
 public class TitularDAOImpl implements TitularDAO {
     @Override
@@ -31,6 +33,55 @@ public class TitularDAOImpl implements TitularDAO {
 
     @Override
     public Titular getUsuarioByNroDocumento(String nroDocumento) throws SQLException {
-        return null;
+        Titular titular = null;
+        String query = "SELECT * FROM titular WHERE nroDocumento = ?";
+        try (   Connection connection = DatabaseConnection.getConnection();
+                PreparedStatement stmt = connection.prepareStatement(query))
+        {
+            stmt.setString(1, nroDocumento);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                String nroDocumento2 = rs.getString("nroDocumento");
+                String tipoDocumento = rs.getString("tipoDocumento");
+                String apellido = rs.getString("apellido");
+                String nombre = rs.getString("nombre");
+                LocalDate fechaNacimiento = LocalDate.parse(rs.getString("fechaNacimiento")); // Assuming default format
+                String direccion = rs.getString("direccion");
+
+                String claseSolicitadaString = rs.getString("claseSolicitada");
+                Character claseSolicitada = null;
+                if (claseSolicitadaString != null && !claseSolicitadaString.isEmpty()) {
+                    claseSolicitada = claseSolicitadaString.charAt(0);
+                }
+
+                String grupoSanguineoString = rs.getString("grupoSanguineo");
+                Character grupoSanguineo = null;
+                if (grupoSanguineoString != null && !grupoSanguineoString.isEmpty()) {
+                    grupoSanguineo = grupoSanguineoString.charAt(0);
+                }
+
+                String factorRHString = rs.getString("factorRH");
+                Character factorRH = null;
+                if (factorRHString != null && !factorRHString.isEmpty()) {
+                    factorRH = factorRHString.charAt(0);
+                }
+
+                Boolean esDonante = rs.getBoolean("esDonante");
+
+                return new Titular(
+                        nroDocumento2,
+                        tipoDocumento,
+                        apellido,
+                        nombre,
+                        fechaNacimiento,
+                        direccion,
+                        claseSolicitada,
+                        grupoSanguineo,
+                        factorRH,
+                        esDonante
+                );
+            }
+        }
+        return titular;
     }
 }
