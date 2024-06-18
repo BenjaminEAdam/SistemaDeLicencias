@@ -36,7 +36,7 @@ public class UsuarioDAOImpl implements UsuarioDAO{
     @Override
     public Usuario getUsuarioById(int id) throws SQLException {
         Usuario usuario = null;
-        String query = "SELECT * FROM usuarios WHERE id = ?";
+        String query = "SELECT * FROM usuario WHERE id = ?";
         try (   Connection connection = DatabaseConnection.getConnection();
                 PreparedStatement stmt = connection.prepareStatement(query))
         {
@@ -52,7 +52,7 @@ public class UsuarioDAOImpl implements UsuarioDAO{
     @Override
     public Usuario getUsuarioByCorreoElectronico(String correoElectronico) throws SQLException {
         Usuario usuario = null;
-        String query = "SELECT * FROM usuarios WHERE correoElectronico = ?";
+        String query = "SELECT * FROM usuario WHERE correoElectronico = ?";
         try (   Connection connection = DatabaseConnection.getConnection();
                 PreparedStatement stmt = connection.prepareStatement(query))
         {
