@@ -33,3 +33,10 @@ CREATE TABLE usuario(
     rol VARCHAR(20)
 );
 
+CREATE TABLE contribuyente(
+	nroDocumento VARCHAR(10) PRIMARY KEY,
+    nombre VARCHAR(40),
+    apellido VARCHAR(20),
+    fechaNacimiento DATE,
+    direcion VARCHAR(50),
+);
