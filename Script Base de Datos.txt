@@ -38,5 +38,5 @@ CREATE TABLE contribuyente(
     nombre VARCHAR(40),
     apellido VARCHAR(20),
     fechaNacimiento DATE,
-    direcion VARCHAR(50),
+    direccion VARCHAR(50),
 );
