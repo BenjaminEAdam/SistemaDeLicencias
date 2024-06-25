@@ -4,8 +4,8 @@ import java.time.LocalDate;
 
 public class Contribuyente {
     private String nroDocumento;
-    private String apellido;
     private String nombre;
+    private String apellido;
     private LocalDate fechaNacimiento;
     private String direccion;
 

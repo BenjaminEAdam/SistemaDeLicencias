@@ -14,7 +14,7 @@ public class UsuarioDAOImpl implements UsuarioDAO{
     // Ver que retornar después
     @Override
     public void create(Usuario usuario) throws SQLException {
-        String query = "INSERT INTO usuarios (correoElectronico, nombreDeUsuario, contrasenia, permisos) VALUES (?, ?, ?, ?)";
+        String query = "INSERT INTO usuario (correoElectronico, nombreDeUsuario, contrasenia, permisos) VALUES (?, ?, ?, ?)";
         try (   Connection connection = DatabaseConnection.getConnection();
                 PreparedStatement stmt = connection.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS))
         {
